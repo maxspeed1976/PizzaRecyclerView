@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray"
-    tools:context="com.example.personrecyclerview.com.example.PizzaRecyclerview.MainActivity">
+    tools:context="com.example.PizzaRecyclerview.MainActivity">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

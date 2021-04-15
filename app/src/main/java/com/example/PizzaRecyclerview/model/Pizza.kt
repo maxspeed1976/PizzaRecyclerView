@@ -36,7 +36,7 @@ val snacks = listOf(
                 name = "Четыре сыра",
                 imageUrl = drawable.fourcheese,
                 price = 299,
-                detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud..."
+                detail = "Сливочный соус, сыр дор блю, сыр чеддер, сыр пармезан, сыр моцарелла.\n"
         ),
         Pizza(
                 id = 4,
