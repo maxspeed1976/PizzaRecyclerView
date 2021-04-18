@@ -8,11 +8,11 @@
     >
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="172dp"
+        android:layout_marginEnd="32dp"
         android:text="Заказать"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,22 +21,23 @@
         android:id="@+id/buttonMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="204dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginBottom="172dp"
+        android:layout_marginEnd="280dp"
         android:text="-"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         />
     <Button
         android:id="@+id/buttonPlus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="204dp"
+        android:layout_marginBottom="172dp"
+        android:layout_marginEnd="172dp"
         android:text="+"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
         />
     <ImageView
         android:id="@+id/imageView"
@@ -66,7 +67,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="188dp"
         android:layout_marginStart="16dp"
         android:text="Кол-во"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,29 +84,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="20dp"
         android:text="цена"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
     <TextView
         android:id="@+id/quantity"
-        android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginBottom="172dp"
+        android:layout_marginEnd="236dp"
+        android:padding="8dp"
+        android:textSize="24sp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonMinus"
+        app:layout_constraintEnd_toEndOf="parent"
         />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="558dp"
+        />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="288dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

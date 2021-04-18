@@ -29,7 +29,7 @@ class PizzaListAdapter(
             var price: TextView = itemView.findViewById(R.id.age)
             var pizzaImage: ImageView = itemView.findViewById(R.id.picView)
             name.text = pizza.name
-            price.text = pizza.price.toString()
+            price.text = pizza.price.toString()+" грн"
             pizzaImage.setImageResource(pizza.imageUrl)
 
             itemView.setOnClickListener(){
@@ -45,6 +45,7 @@ class PizzaListAdapter(
 
 
             }
+
         }
     }
 
