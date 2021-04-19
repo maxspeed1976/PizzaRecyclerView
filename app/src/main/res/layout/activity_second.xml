@@ -50,6 +50,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/caesar"
         />
+    <RadioGroup
+        android:id="@+id/radioGroup_character"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="230dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30cм"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="40см"
+            />
+    </RadioGroup>
+
+
     <TextView
         android:id="@+id/detail"
         android:layout_width="wrap_content"
@@ -58,10 +86,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.255"
+        app:layout_constraintVertical_bias="0.14"
         />
     <TextView
         android:id="@+id/textView"
@@ -84,7 +111,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
-
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
@@ -95,8 +121,8 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
     <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
@@ -104,8 +130,8 @@
         android:layout_marginBottom="172dp"
         android:layout_marginEnd="236dp"
         android:padding="8dp"
-        android:textSize="24sp"
         android:text="1"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
@@ -117,14 +143,5 @@
         app:layout_constraintGuide_begin="558dp"
         />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="288dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

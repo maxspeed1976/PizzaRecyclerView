@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.PizzaRecyclerview.SecondActivity
 import com.example.PizzaRecyclerview.data.PizzaListAdapter.ViewHolder
 import com.example.PizzaRecyclerview.model.Pizza
+import com.example.PizzaRecyclerview.model.SizePizza
 import com.example.personrecyclerview.R
 
 class PizzaListAdapter(
@@ -39,6 +40,12 @@ class PizzaListAdapter(
                 intent.putExtra("price",pizza.price)
                 intent.putExtra("detail", pizza.detail)
                 intent.putExtra("imageURL", pizza.imageUrl)
+                //intent.putExtra("size",pizza.size[0].size)
+                intent.putExtra("price1",pizza.size[1]+" грн")
+                intent.putExtra("price2",pizza.size[3]+" грн")
+                intent.putExtra("size1",pizza.size[0]+" грн")
+                intent.putExtra("size2",pizza.size[2]+" грн")
+
 
                 val bundle = Bundle()
                 startActivity(context, intent,bundle)

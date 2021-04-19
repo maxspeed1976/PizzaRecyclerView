@@ -9,7 +9,7 @@ data class Pizza(
         var imageUrl: Int,
         var price: Int,
         var detail: String,
-        var size: List<SizePizza>
+        var size: List<String>
 
         )
 
@@ -23,14 +23,17 @@ val snacks = listOf(
                 price = 299,
                 detail = "Томатный соус, сыр моцарелла, сыр пармезан, томаты,\n" +
                         "маслины, базилик."
-        , size= listOf(SizePizza("40см",100),SizePizza("30см",200))),
+        , size = listOf("570гр(30см)","105","850гр(40см)","135"))
+        ,
+
         Pizza(
                 id = 2,
                 name = "Карбонара",
                 imageUrl = drawable.carbonara,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf("570 гр(30см)", "135", "870 гр(40см)","165"))
+
         ,
         Pizza(
                 id = 3,
@@ -38,7 +41,7 @@ val snacks = listOf(
                 imageUrl = drawable.fourcheese,
                 price = 299,
                 detail = "Сливочный соус, сыр дор блю, сыр чеддер, сыр пармезан, сыр моцарелла.\n",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf("600 гр(30см)", "145", "910 гр(40см)","190"))
         ,
         Pizza(
                 id = 4,
@@ -46,15 +49,15 @@ val snacks = listOf(
                 imageUrl = drawable.meat,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
-        ,
+                size= listOf("600 гр(30см)", "135", "920 гр(40см)","170")))
+/*        ,
         Pizza(
                 id = 5,
                 name = "Охотничья",
                 imageUrl = drawable.hunt,
                 price = 499,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 6,
@@ -62,7 +65,7 @@ val snacks = listOf(
                 imageUrl = drawable.firm,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 7,
@@ -70,7 +73,7 @@ val snacks = listOf(
                 imageUrl = drawable.peperoni,
                 price = 1299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
                 ,
         Pizza(
                 id = 8,
@@ -78,7 +81,7 @@ val snacks = listOf(
                 imageUrl = drawable.salmone,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 9,
@@ -86,7 +89,7 @@ val snacks = listOf(
                 imageUrl = drawable.hawaian,
                 price = 549,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 10,
@@ -94,7 +97,7 @@ val snacks = listOf(
                 imageUrl = drawable.salami,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 11,
@@ -102,7 +105,7 @@ val snacks = listOf(
                 imageUrl = drawable.caprichiosa,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 12,
@@ -110,7 +113,7 @@ val snacks = listOf(
                 imageUrl = drawable.sicilian,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
         ,
         Pizza(
                 id = 13,
@@ -118,6 +121,6 @@ val snacks = listOf(
                 imageUrl = drawable.caesar,
                 price = 299,
                 detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
-                size= listOf(SizePizza("40см",100),SizePizza("30см",200)))
+                size= listOf(SizePizza("30см", 100, "40см"),SizePizza("40см", 200, "40см")))
 
-)
+)*/
