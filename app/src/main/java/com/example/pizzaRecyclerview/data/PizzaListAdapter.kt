@@ -1,4 +1,4 @@
-package com.example.PizzaRecyclerview.data
+package com.example.pizzaRecyclerview.data
 
 import android.content.Context
 import android.content.Intent
@@ -8,13 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.PizzaRecyclerview.SecondActivity
-import com.example.PizzaRecyclerview.data.PizzaListAdapter.ViewHolder
-import com.example.PizzaRecyclerview.model.Pizza
-import com.example.PizzaRecyclerview.model.SizePizza
+import com.example.pizzaRecyclerview.SecondActivity
+import com.example.pizzaRecyclerview.data.PizzaListAdapter.ViewHolder
+import com.example.pizzaRecyclerview.model.Pizza
 import com.example.personrecyclerview.R
 
 class PizzaListAdapter(

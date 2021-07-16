@@ -1,10 +1,7 @@
-package com.example.PizzaRecyclerview
+package com.example.pizzaRecyclerview
 
-import android.R
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.PizzaRecyclerview.model.SizePizza
 import com.example.personrecyclerview.R.layout
 import kotlinx.android.synthetic.main.activity_second.*
 
@@ -15,13 +12,6 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_second)
-
-
-
-
-
-
-
 
         val intent = getIntent();
         val text = intent.getStringExtra("name")
@@ -34,24 +24,16 @@ class SecondActivity : AppCompatActivity() {
         val size1 = intent.getStringExtra("size1")
         val size2 = intent.getStringExtra("size2")
 
-
-
-
-
-
-
-
-      //  Toast.makeText(this, text, Toast.LENGTH_LONG).show()
         name.text = text
         price.text = pricePizza.toString()+" грн"
         detail.text = detailPizza
         radioButton_male.text = size1 +" - "+price1.toString()
         radioButton_female.text = size2 +" - "+price2.toString()
         imageView.setImageResource(imageURL)
-
-
-
+        button_order.setOnClickListener(){
+            cart_count.text = "2"
+            cart_count.setTextColor(3)
+        }
 
     }
-
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray"
-    tools:context="com.example.PizzaRecyclerview.MainActivity">
+    tools:context="com.example.pizzaRecyclerview.MainActivity">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,4 +21,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

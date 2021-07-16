@@ -1,17 +1,19 @@
-package com.example.PizzaRecyclerview
+package com.example.pizzaRecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.personrecyclerview.R.layout
-import com.example.PizzaRecyclerview.data.PizzaListAdapter
-import com.example.PizzaRecyclerview.model.Pizza
-import com.example.PizzaRecyclerview.model.snacks
+import com.example.pizzaRecyclerview.data.PizzaListAdapter
+import com.example.pizzaRecyclerview.model.Pizza
+import com.example.pizzaRecyclerview.model.snacks
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+
+
     private var adapter: PizzaListAdapter? = null
     private var pizzaList : List<Pizza>? = null
     private var layoutManager : RecyclerView.LayoutManager? = null

@@ -1,6 +1,12 @@
-package com.example.PizzaRecyclerview.model
+package com.example.pizzaRecyclerview.model
 
 import com.example.personrecyclerview.R.drawable
+
+sealed class Ingridient(val name: String, val cost: Int? = null, val veight: Int? = null)
+class TomatoSauce() : Ingridient(name = "Томатный соус")
+class Mocarella() : Ingridient(name = "сыр моцарелла")
+class Parmezan() : Ingridient("сыр пармезан")
+class Tomato() : Ingridient("томаты")
 
 data class Pizza(
         var id: Int,
@@ -8,7 +14,7 @@ data class Pizza(
         var age: Int? = null,
         var imageUrl: Int,
         var price: Int,
-        var detail: String,
+        var detail: List<Ingridient>,
         var size: List<String>
 
         )
@@ -21,7 +27,9 @@ val snacks = listOf(
                 name = "Маргарита",
                 imageUrl = drawable.margarita,
                 price = 299,
-                detail = "Томатный соус, сыр моцарелла, сыр пармезан, томаты,\n" +
+                detail = listOf(TomatoSauce(), Mocarella(), Parmezan(), Tomato()),
+
+                "Томатный соус, сыр моцарелла, сыр пармезан, томаты,\n" +
                         "маслины, базилик."
         , size = listOf("570гр(30см)","105","850гр(40см)","135"))
         ,
@@ -31,7 +39,8 @@ val snacks = listOf(
                 name = "Карбонара",
                 imageUrl = drawable.carbonara,
                 price = 299,
-                detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
+                detail = "Сливочный соус, сыр моцарелла, куриное\n" +
+                        "филе, бекон, шампиньоны, сыр пармезан,томаты, яйцо",
                 size= listOf("570 гр(30см)", "135", "870 гр(40см)","165"))
 
         ,
@@ -48,7 +57,9 @@ val snacks = listOf(
                 name = "Мясная",
                 imageUrl = drawable.meat,
                 price = 299,
-                detail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...",
+                detail = "Соус томатный, бекон, телятина, ветчина,\n" +
+                        "болгарский перец, маслины, помидор, сыр\n" +
+                        "моцарелла.",
                 size= listOf("600 гр(30см)", "135", "920 гр(40см)","170")))
 /*        ,
         Pizza(
